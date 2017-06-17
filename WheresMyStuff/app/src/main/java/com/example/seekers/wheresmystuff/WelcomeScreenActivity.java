@@ -24,5 +24,8 @@ public class WelcomeScreenActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
+    protected void onRegistrationPressed(View view) {
+        Intent intent = new Intent(WelcomeScreenActivity.this, RegistrationScreenActivity.class);
+        startActivity(intent);
+    }
 }
