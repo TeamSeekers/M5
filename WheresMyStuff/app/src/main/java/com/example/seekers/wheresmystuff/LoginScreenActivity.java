@@ -24,11 +24,13 @@ public class LoginScreenActivity extends AppCompatActivity {
     }
 
     protected void onEnterPressed(View view) {
-        if (username.getText().toString().equals("user") && password.getText().toString().equals("pass")){
-            Intent intent = new Intent(LoginScreenActivity.this, HomeScreenActivity.class);
-            startActivity(intent);
-            finish();
-        } else {
+        String user = username.getText().toString();
+        String pass = password.getText().toString();
+        boolean found = false;
+        while (!found) {
+//          add a way to search through a list of users and admins to check for match
+        }
+        if (!found) {
             AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
             builder1.setMessage("Incorrect username or password");
             builder1.setCancelable(true);

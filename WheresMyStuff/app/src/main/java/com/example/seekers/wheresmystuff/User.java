@@ -11,14 +11,12 @@ public class User {
     private String username;
     private String password;
     private String accountType;
-    private static ArrayList<User> userList;
 
     public User(String name, String username, String password, String accountType) {
         this.name = name;
         this.username = username;
         this.password = password;
         this.accountType = accountType;
-        userList.add(this);
     }
 
     public String getName() {
@@ -33,8 +31,9 @@ public class User {
         return accountType;
     }
 
-    public ArrayList<User> getUserList() {
-        return userList;
+    public String getPassword() {
+        return password;
     }
+
 
 }
