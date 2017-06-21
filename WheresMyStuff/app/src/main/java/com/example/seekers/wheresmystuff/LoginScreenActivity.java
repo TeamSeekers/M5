@@ -21,6 +21,7 @@ public class LoginScreenActivity extends AppCompatActivity {
 
         username = (EditText) findViewById(R.id.username);
         password = (EditText) findViewById(R.id.password);
+        PersonList personList = new PersonList();
     }
 
     protected void onEnterPressed(View view) {

@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Created by pritshah on 6/17/17.
  */
 
-public class Admin {
+public class Admin extends Person {
     private String name;
     private String username;
     private String password;
