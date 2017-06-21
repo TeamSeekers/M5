@@ -39,8 +39,8 @@ public class LoginScreenActivity extends AppCompatActivity {
             AlertDialog alert11 = builder1.create();
             alert11.show();
         } else {
-            //display correct page
-        }
+            Intent intent = new Intent(LoginScreenActivity.this, HomeScreenActivity.class);
+            startActivity(intent);        }
     }
 
     protected void onCancelPressed(View view){
