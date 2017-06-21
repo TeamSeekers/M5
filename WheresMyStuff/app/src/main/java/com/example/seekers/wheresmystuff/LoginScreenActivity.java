@@ -21,7 +21,6 @@ public class LoginScreenActivity extends AppCompatActivity {
 
         username = (EditText) findViewById(R.id.username);
         password = (EditText) findViewById(R.id.password);
-        PersonList personList = new PersonList();
     }
 
     protected void onEnterPressed(View view) {
@@ -29,7 +28,9 @@ public class LoginScreenActivity extends AppCompatActivity {
         String pass = password.getText().toString();
         boolean found = false;
         while (!found) {
-//          add a way to search through a list of users and admins to check for match
+            if (WelcomeScreenActivity.personList.getPersonList().get(pass).getUsername().equals(user)) {
+                found = true;
+            }
         }
         if (!found) {
             AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
@@ -37,6 +38,8 @@ public class LoginScreenActivity extends AppCompatActivity {
             builder1.setCancelable(true);
             AlertDialog alert11 = builder1.create();
             alert11.show();
+        } else {
+            //display correct page
         }
     }
 

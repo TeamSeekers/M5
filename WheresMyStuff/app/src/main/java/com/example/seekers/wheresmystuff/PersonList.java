@@ -7,9 +7,13 @@ import java.util.HashMap;
  */
 
 public class PersonList {
-    private HashMap personList;
+    private HashMap<String, Person> personList;
 
     public PersonList() {
         personList = null;
+    }
+
+    public HashMap<String, Person> getPersonList() {
+        return personList;
     }
 }

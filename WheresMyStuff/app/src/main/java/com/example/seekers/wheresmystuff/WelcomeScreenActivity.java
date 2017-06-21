@@ -6,10 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.HashMap;
+
 public class WelcomeScreenActivity extends AppCompatActivity {
 
     private Button login;
     private Button registration;
+    public static PersonList personList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +20,9 @@ public class WelcomeScreenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_welcome_screen);
         login = (Button) findViewById(R.id.login);
         registration = (Button) findViewById(R.id.registration);
+        personList = new PersonList();
+
+
     }
 
     protected void onLoginPressed(View view){

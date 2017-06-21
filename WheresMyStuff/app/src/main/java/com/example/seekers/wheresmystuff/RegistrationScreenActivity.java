@@ -38,16 +38,18 @@ public class RegistrationScreenActivity extends AppCompatActivity {
 
     protected void onRegistrationEnterPressed(View view) {
         String account = "";
+        String newUserName = enterUsername.getText().toString();
+        String newPassword = enterPassword.getText().toString();
         if (userAccountType.isChecked()) {
             account = "User";
             User newUser = new User(enterName.getText().toString(),
-                    enterUsername.getText().toString(), enterPassword.getText().toString(), account);
-//              add way to add user to a list
+                    newUserName, newPassword, account);
+            WelcomeScreenActivity.personList.getPersonList().put(newUser.getPassword(), newUser);
         } else {
             account = "Admin";
             Admin newAdmin = new Admin(enterName.getText().toString(),
-                    enterUsername.getText().toString(), enterPassword.getText().toString(), account);
-            // add way to add admin to a list
+                    newUserName, newPassword, account);
+            WelcomeScreenActivity.personList.getPersonList().put(newAdmin.getPassword(), newAdmin);
         }
         AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
         builder1.setMessage("Registration Successful");
