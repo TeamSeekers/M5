@@ -13,6 +13,7 @@ public class WelcomeScreenActivity extends AppCompatActivity {
     private Button login;
     private Button registration;
     public static PersonList personList;
+    public static LostItemList lostItemList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +22,7 @@ public class WelcomeScreenActivity extends AppCompatActivity {
         login = (Button) findViewById(R.id.login);
         registration = (Button) findViewById(R.id.registration);
         personList = new PersonList();
-
+        lostItemList = new LostItemList();
     }
 
     protected void onLoginPressed(View view){

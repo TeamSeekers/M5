@@ -17,7 +17,9 @@
         </activity>
         <activity android:name=".LoginScreenActivity" />
         <activity android:name=".HomeScreenActivity" />
-        <activity android:name=".RegistrationScreenActivity"></activity>
+        <activity android:name=".RegistrationScreenActivity" />
+        <activity android:name=".EnterLostItemActivity" />
+        <activity android:name=".LostItemsListActivity"></activity>
     </application>
 
 </manifest>
