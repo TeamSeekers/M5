@@ -10,7 +10,7 @@ public class PersonList {
     private HashMap<String, Person> personList;
 
     public PersonList() {
-        personList = null;
+        personList = new HashMap<String, Person>();
     }
 
     public HashMap<String, Person> getPersonList() {

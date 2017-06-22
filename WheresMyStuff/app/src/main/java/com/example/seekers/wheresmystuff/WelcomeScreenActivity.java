@@ -22,7 +22,6 @@ public class WelcomeScreenActivity extends AppCompatActivity {
         registration = (Button) findViewById(R.id.registration);
         personList = new PersonList();
 
-
     }
 
     protected void onLoginPressed(View view){

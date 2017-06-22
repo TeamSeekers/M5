@@ -32,8 +32,7 @@ public class LoginScreenActivity extends AppCompatActivity {
             builder1.setCancelable(true);
             AlertDialog alert11 = builder1.create();
             alert11.show();
-        }
-        if (WelcomeScreenActivity.personList.getPersonList().get(pass).getUsername().equals(user)) {
+        } else if (WelcomeScreenActivity.personList.getPersonList().get(pass).getUsername().equals(user)) {
             Intent intent = new Intent(LoginScreenActivity.this, HomeScreenActivity.class);
             startActivity(intent);
             finish();
