@@ -57,6 +57,21 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="73dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        android:layout_marginBottom="75dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.78" />
+
+    <Button
+        android:id="@+id/cancelEnterItemClicked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:onClick="onCancelEnterItemClicked"
+        android:text="Cancel"
+        app:layout_constraintBottom_toBottomOf="@+id/enterLostItemButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/enterLostItemButton"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1" />
 </android.support.constraint.ConstraintLayout>

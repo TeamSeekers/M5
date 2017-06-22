@@ -21,4 +21,8 @@ public class EnterLostItemActivity extends AppCompatActivity {
         WelcomeScreenActivity.lostItemList.getLostItemList().add(newLostItem);
         finish();
     }
+
+    protected void onCancelEnterItemClicked(View view) {
+        finish();
+    }
 }
