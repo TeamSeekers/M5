@@ -16,14 +16,12 @@ import java.util.List;
 public class LostItemsListActivity extends AppCompatActivity {
 
     private ListView itemsList;
-    private LinearLayout layout;
     private ArrayAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lost_items_list);
-        layout = (LinearLayout) findViewById(R.id.linearLayout);
         itemsList = (ListView) findViewById(R.id.itemsList);
         adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, WelcomeScreenActivity.lostItemList.getLostItemList());
         itemsList.setAdapter(adapter);
