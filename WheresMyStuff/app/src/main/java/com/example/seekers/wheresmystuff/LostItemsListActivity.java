@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Layout;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -26,5 +27,9 @@ public class LostItemsListActivity extends AppCompatActivity {
         itemsList = (ListView) findViewById(R.id.itemsList);
         adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, WelcomeScreenActivity.lostItemList.getLostItemList());
         itemsList.setAdapter(adapter);
+    }
+
+    protected void onBackToHomeClicked(View view) {
+        finish();
     }
 }
