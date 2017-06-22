@@ -26,24 +26,21 @@ public class LoginScreenActivity extends AppCompatActivity {
     protected void onEnterPressed(View view) {
         String user = username.getText().toString();
         String pass = password.getText().toString();
-        if (WelcomeScreenActivity.personList.getPersonList().get(pass) == null) {
+        boolean found = false;
+        while (!found) {
+            if (WelcomeScreenActivity.personList.getPersonList().get(pass).getUsername().equals(user)) {
+                found = true;
+            }
+        }
+        if (!found) {
             AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
             builder1.setMessage("Incorrect username or password");
             builder1.setCancelable(true);
             AlertDialog alert11 = builder1.create();
             alert11.show();
-        }
-        if (WelcomeScreenActivity.personList.getPersonList().get(pass).getUsername().equals(user)) {
-                Intent intent = new Intent(LoginScreenActivity.this, HomeScreenActivity.class);
-                startActivity(intent);
-                finish();
-        }
-        else {
-            AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
-            builder1.setMessage("Incorrect username or password");
-            builder1.setCancelable(true);
-            AlertDialog alert11 = builder1.create();
-            alert11.show();
+        } else {
+            Intent intent = new Intent(LoginScreenActivity.this, HomeScreenActivity.class);
+            startActivity(intent);        }
     }
 
     protected void onCancelPressed(View view){
