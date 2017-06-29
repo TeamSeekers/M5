@@ -9,6 +9,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+/**
+ * This class represents the controller for the Login Screen
+ * to handle the scenarios for a successful and unsuccessful login.
+ *
+ */
 public class LoginScreenActivity extends AppCompatActivity {
 
     private EditText username;
@@ -23,6 +28,12 @@ public class LoginScreenActivity extends AppCompatActivity {
         password = (EditText) findViewById(R.id.password);
     }
 
+    /**
+     * A method to check if the login attempt is successful or unsuccessful by
+     * checking the existing username and password given when user registered.
+     *
+     * @param view The view of the Login screen
+     */
     protected void onEnterPressed(View view) {
         String user = username.getText().toString();
         String pass = password.getText().toString();
@@ -45,6 +56,11 @@ public class LoginScreenActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Method to return to the previous view when the cancel button is pressed.
+     *
+     * @param view The view of the Login screen.
+     */
     protected void onCancelPressed(View view){
         finish();
     }

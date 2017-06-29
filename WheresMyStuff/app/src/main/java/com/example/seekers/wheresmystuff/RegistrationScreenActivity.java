@@ -14,6 +14,11 @@ import android.widget.RadioButton;
 import java.util.ArrayList;
 import java.util.EventListener;
 
+/**
+ * This class represents the controller for the Registration Screen
+ * to handle the scenarios for a successful and unsuccessful registration.
+ *
+ */
 public class RegistrationScreenActivity extends AppCompatActivity {
 
     private EditText enterName;
@@ -36,6 +41,13 @@ public class RegistrationScreenActivity extends AppCompatActivity {
         adminAccountType = (RadioButton) findViewById(R.id.adminAccountType);
     }
 
+
+    /**
+     * A method to create a users account given the entered username and
+     * password.
+     *
+     * @param view The view of the registration screen.
+     */
     protected void onRegistrationEnterPressed(View view) {
         String account = "";
         String newUserName = enterUsername.getText().toString();
@@ -59,6 +71,11 @@ public class RegistrationScreenActivity extends AppCompatActivity {
         finish();
     }
 
+    /**
+     * Method to return to the previous view when the cancel button is pressed.
+     *
+     * @param view The view of the registration screen.
+     */
     protected void onRegistrationCancelPressed(View view) {
         finish();
     }
